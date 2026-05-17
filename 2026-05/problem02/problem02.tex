@@ -1,0 +1,35 @@
+Problem 2: What is the last digit of $4^{3^{2019}}$?
+
+Solution:
+
+We can write a table that gives the value of $4^n$ for all positive integers n up to n=20. Then we observe a pattern: $4^n$ ends in 4 when n is odd, and $4^n$ ends in 6 when n is even.
+
+Since $3^{2019}$ is an odd number, we can guess that the last digit of $4^{3^{2019}}$ is a 4.
+
+Now, let's prove it.
+
+Let $n$ be a positive integer that has 4 in its ones digit (or equivalently, n is equal to 4 mod 10). We can write $n = 10k + 4$ by finding a suitable integer value for $k$. If we multiply $n$ by 4, we get
+
+\begin{align*}
+4n &= 4(10k + 4) \\
+&= 40k + 16 \\
+&= 40k + 10 + 6 \\
+&= 10(4k + 1) + 6
+\end{align*}
+
+We can infer that $4n$ has a 6 in its ones digit, because $10(4k + 1) + 6$ necessarily ends in 6.
+
+Let $m$ be a positive integer that has 6 in its ones digit (or equivalently, m is equal to 6 mod 10). We can write $m = 10j + 6$ by finding a suitable integer value for $j$. If we multiply $m$ by 4, we get
+
+\begin{align*}
+4m &= 4(10j + 6) \\
+&= 40j + 24 \\
+&= 40j + 20 + 4 \\
+&= 10(4j + 2) + 4
+\end{align*}
+
+We can infer that $4m$ has a 4 in its ones digit, because $10(4j + 2) + 4$ necessarily ends in 4.
+
+Using these conclusions, we can show, by induction, that $4^n$ ends in a 4 if $n$ is odd, and $4^n$ ends in a 6 if $n$ is even. We assume the rule is true for $n$; then, our work beforehand shows that it's true for $n+1$. It's true for the base case, where $4^1$ has a 4 in its ones digit. Thus it's true for all positive integers $n$.
+
+Since $4^{3^{2019}}$ is four raised to the power of an odd number, we can deduce that the last digit of $4^{3^{2019}}$ is a four.
