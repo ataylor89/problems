@@ -1,0 +1,15 @@
+Problem 1: Show that $$\prod_{\substack{p \leq n \\ p \text{ is prime}}}p < 4^n$$ for every natural number n greater than or equal to two.
+
+Solution:
+
+Let n be a natural number greater than or equal to two. The product of all primes less than or equal to n is necessarily less than $n^{\pi(n)}$, where $\pi$ is the prime-counting function. $\pi(n)$ is usually defined as $\pi(n) = \frac{n}{\ln(n)}$, but we can use $\frac{1.26n}{\ln(n)}$ as an upper bound. So our bound can be written as $n^{\frac{1.26n}{\ln(n)}}$.
+
+We can use the change-of-base formula for an exponential function.
+
+$$n^{\frac{1.26n}{\ln(n)}} = e^{\ln(n)\frac{1.26n}{\ln(n)}} = e^{1.26n}$$.
+
+Thus our bound can be written more simply as $e^{1.26n}$.
+
+$$ \prod_{\substack{p \leq n \\ p \text{ is prime}}}p < e^{1.26n} $$
+
+Since $e^{1.26n} < 4^n$, it follows that $$\prod_{\substack{p \leq n \\ p \text{ is prime}}}p < 4^n$$.
