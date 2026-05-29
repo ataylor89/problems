@@ -1,0 +1,30 @@
+Problem: For what real values of $x$ is $$\sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sqrt{2x-1}} = A$$ given 
+
+\begin{enumerate}
+\item $A = \sqrt{2}$
+\item $A = 1$
+\item $A = 2$
+\end{enumerate}
+
+where only non-negative real numbers are admitted for square roots? (Source: 1959 IMO)
+
+Solution: We can actually simplify this equation by squaring both sides. Keep in mind that squaring both sides of an equation is a valid algebraic operation.
+
+\begin{align*}
+\sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sqrt{2x-1}} &= A \\
+\left(\sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sqrt{2x-1}}\right)\left(\sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sqrt{2x-1}}\right) &= A^2 \\
+x + \sqrt{2x-1} + \sqrt{x^2 - (2x - 1)} + \sqrt{x^2 - (2x - 1)} + x - \sqrt{2x-1} = A^2 \\
+x + \sqrt{x^2 - (2x - 1)} + \sqrt{x^2 - (2x - 1)} + x = A^2 \\
+x + \sqrt{x^2 - 2x + 1} + \sqrt{x^2 - 2x + 1} + x = A^2 \\
+x + \sqrt{(x-1)^2} + \sqrt{(x-1)^2} + x = A^2 \\
+x + (x-1) + (x-1) + x = A^2 \\
+4x - 2 &= A^2 \\
+4x &= A^2 + 2 \\
+x &= \frac{A^2 + 2}{4}
+\end{align*}
+
+Now we can solve for $x$ by plugging in different values of $A$.
+
+When $A = \sqrt{2}$, we have $x = 1$. When $A = 1$, we have $x = \dfrac{3}{4}$. When $A = 2$, we have $x = \dfrac{3}{2}$.
+
+Thus $x = \left\{1, \dfrac{3}{4}, \dfrac{3}{2} \right\}$.
