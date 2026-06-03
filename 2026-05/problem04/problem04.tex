@@ -8,7 +8,7 @@ Problem: For what real values of $x$ is $$\sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sq
 
 where only non-negative real numbers are admitted for square roots? (Source: 1959 IMO)
 
-Solution: We can actually simplify this equation by squaring both sides. Keep in mind that squaring both sides of an equation is a valid algebraic operation.
+Solution: We can simplify this equation by squaring both sides.
 
 \begin{align*}
 \sqrt{x + \sqrt{2x-1}} + \sqrt{x - \sqrt{2x-1}} &= A \\
@@ -23,8 +23,8 @@ x + (x-1) + (x-1) + x = A^2 \\
 x &= \frac{A^2 + 2}{4}
 \end{align*}
 
-Now we can solve for $x$ by plugging in different values of $A$.
+When $A = \sqrt{2}$, we have $x = 1$. When $A = 2$, we have $x = \dfrac{3}{2}$.
 
-When $A = \sqrt{2}$, we have $x = 1$. When $A = 1$, we have $x = \dfrac{3}{4}$. When $A = 2$, we have $x = \dfrac{3}{2}$.
+It looks like $A = 1 \implies x = \dfrac{3}{4}$. But plugging $x = \dfrac{3}{4}$ into the original equation does not give us $A = 1$. So I think there is no solution for $A = 1$.
 
-Thus $x = \left\{1, \dfrac{3}{4}, \dfrac{3}{2} \right\}$.
+Thus the solutions are $x = \left\{1, \dfrac{3}{2} \right\}$.
