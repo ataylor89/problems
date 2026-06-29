@@ -1,0 +1,25 @@
+Problem: Prove Fermat's Little Theorem, which says that, if $a \in \mathbb{Z}$, and $p$ is a prime number, then $a^p = a \pmod p$.
+
+Proof: The set $G = \{1,2,...,p-1\}$ forms a group under multiplication modulo $p$. Let's quickly verify this. We know that multiplication modulo $p$ is associative, because multiplication is associative. We know that $1$ is the identity element, because $a \cdot 1 = 1 \cdot a = a \pmod p$ for all $a \in G$. Also, we can show that every element $a \in G$ has an inverse. Let $a$, $x$, and $y$ be elements of $G$. Using the rules of modular arithmetic, we know that
+
+\begin{align*}
+ax = ay \pmod p &\implies ax - ay = 0 \pmod p \\
+&\implies a(x-y) = 0 \pmod p \\
+&\implies p \mid a \textrm{ or } p \mid x - y &\textrm{ because $p$ is prime} \\
+&\implies x = y &\textrm{ because $0 < a < p$ and $0 < x, y < p$}
+\end{align*}
+
+This means that if we fix $a$ and let $X_a = \{ax \mid x \in G\}$, then $X_a$ contains $p-1$ distinct nonzero elements, $X_a = G$, and $X_a$ contains the identity. So there must be some $x \in G$ such that $ax = 1$. Thus every $a \in G$ has an inverse.
+
+Lastly, we can show that $G$ is closed under multiplication modulo $p$. Every element of $G$ is relatively prime with $p$, so no product can ever equal $0$ modulo p. The products must belong to $G$, meaning that $G$ is closed.
+
+We have now shown that $G$ is a finite group under multiplication modulo $p$. Let $a \in G$ and let $k$ be the order of $a$. By Lagrange's theorem, we know that $k \mid p-1$. The rules of arithmetic allow us to do the following.
+
+\begin{align*}
+a^k = 1 \pmod p \\
+(a^k)^{(p-1)/k} = 1^{(p-1)/k} \pmod p \\
+a^{p-1} = 1 \pmod p \\
+a^p = a \pmod p
+\end{align*}
+
+You can see that, once we establish that $G$ is a group under multiplication modulo $p$, the rest is pretty easy. Lagrange's theorem tells us that $k \mid p-1$, which allows us to raise both sides of the equation to the power of $(p-1)/k$. The $k$ terms cancel and we are left with the equation $a^{p-1} = 1 \pmod p$. We multiply both sides by $a$ to obtain the result $a^p = a \pmod p$. This holds true for all $a \in G$. We can extend this result to the integers. Let $a \in \mathbb{Z}$ such that $a \neq 0$ and let $a'$ be the element of $G$ such that $a' = a \pmod p$. Then $a^p = (a')^p = p \pmod p$. Now let $a = 0$. Then $0^p = 0 \pmod p$, which shows that it holds for zero as well. Thus it holds for all the integers. QED
